@@ -2,10 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./home.scss";
+// import Title from "../title/title";
 
 export default function Home() {
   return (
     <div className='home-wrapper'>
+      {/* <Title /> */}
       <div className='goal-wrapper'>
         <div className='goal-title'>The Goal:</div>
         <div className='goal'>

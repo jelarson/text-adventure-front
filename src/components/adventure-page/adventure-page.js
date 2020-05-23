@@ -3,6 +3,7 @@ import axios from "axios";
 
 import { Link } from "react-router-dom";
 
+import Title from "../title/title";
 import "./adventure-page.scss";
 import { UserContext } from "../context/context";
 
@@ -36,9 +37,10 @@ export default function AdventurePage(props) {
 
   return (
     <div className='adventure-page-wrapper'>
-      <div className='adventure-title'>
+      {/* <div className='adventure-title'>
         <h1>Costco Run</h1>
-      </div>
+      </div> */}
+      <Title />
       <div className='page-content-wrapper'>
         <div className='user-stats-wrapper'>
           <div className='user-stats-title'>Your Stats</div>
@@ -72,16 +74,6 @@ export default function AdventurePage(props) {
 
         <div className='content-wrapper'>
           <div className='adventure-content'>
-            {/* You drive your prius into the madhouse that is the Costco parking
-            lot. You notice an old man rip the nose ring right out of a young
-            hipster girl's nostril as they wrestled over a can of SPAM. "Ah,
-            Costco," your spouse says as they lean over to grab your hand from
-            the passenger seat, "the great equalizer." You nod your head in a
-            agreement. "Where should we park?" you ask. "There's a spot!" Your
-            youngest child adds from the backseat. "No, we shouldn't park
-            there," your spouse adds, "that's a handicapped spot. We'd better
-            park out in the boonies." <br />
-            <br /> Where would you like to park? */}
             {currentAdventure.description}
             <br />
             <br />

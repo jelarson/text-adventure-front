@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import { UserContext } from "../context/context";
+import Title from "../title/title";
 
 export default function Results(props) {
   const { player } = useContext(UserContext);
@@ -65,9 +66,7 @@ export default function Results(props) {
 
   return (
     <div className='adventure-page-wrapper'>
-      <div className='adventure-title'>
-        <h1>Costco Run</h1>
-      </div>
+      <Title />
       <div className='page-content-wrapper'>
         <div className='user-stats-wrapper'>
           <div className='user-stats-title'>Your Stats</div>
@@ -102,15 +101,7 @@ export default function Results(props) {
         </div>
 
         <div className='content-wrapper'>
-          <div className='adventure-content'>
-            {/* Against your spouses wishs, you decide to park in the handicapped
-            parking space. THUMP THUMP. Your car has run over an electric cart
-            that someone has carelessly left in the middle of the parking stall.
-            As a result, you've caused significant damage to your Prius as well
-            as bumping your head hard on the car roof (<span>-10% health</span>
-            )... */}
-            {currentResult.resultDesc}
-          </div>
+          <div className='adventure-content'>{currentResult.resultDesc}</div>
           <div className='adventure-choice-button-wrapper'>
             <Link
               to={{

@@ -18,16 +18,16 @@ export default function Sick() {
       </div>
       <div className='final-results'>
         <div className='health'>
-          Health: ph%
+          Health: {props.location.state.health}%
         </div>
         <div className='security'>
-          Security Awareness: ph%
+          Security Awareness: {props.location.state.security}%
         </div>
         <div className='points'>
-          Points in Cart: ph
+          Points in Cart: {props.location.state.points}
         </div>
         <div className='family'>
-          Family Members Remaining: ph
+          Family Members Remaining: {props.location.state.family}
         </div>
       </div>
       </div>

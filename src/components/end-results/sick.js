@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Title from '../title/title'
 import './end-results.scss'
 
-export default function Sick() {
+export default function Sick(props) {
   return(
     <div className='end-wrapper'>
       <Title/>

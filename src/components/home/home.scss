@@ -24,6 +24,13 @@
     width: 45%;
     margin-bottom: 40px;
 
+    @media (max-width: 870px) {
+      width: 75%;
+    }
+    @media (max-width: 530px) {
+      width: 95%;
+    }
+
     .goal-title {
       margin-top: 20px;
       text-align: center;
@@ -31,10 +38,24 @@
       font-weight: 900;
       margin-bottom: 20px;
       color: #e31837;
+
+      @media (max-width: 410px) {
+        font-size: 3.5em;
+      }
+      @media (max-width: 260px) {
+        font-size: 2.5em;
+      }
     }
 
     .goal {
       font-size: 1.8em;
+
+      @media (max-width: 410px) {
+        font-size: 1.3em;
+      }
+      @media (max-width: 260px) {
+        font-size: 1em;
+      }
 
       span {
         color: #e31837;
@@ -55,6 +76,14 @@
       margin-top: 35px;
       width: 15vw;
       border-radius: 20px;
+
+      @media (max-width: 260px) {
+        font-size: 1.6em;
+      }
+      @media (max-width: 205px) {
+        font-size: 1.2em;
+        padding: 8px;
+      }
 
       &:hover {
         background-color: #e31837;

@@ -12,6 +12,7 @@ export default function Results(props) {
   const [points, setPoints] = useState(props.location.state.points);
   const [family, setFamily] = useState(props.location.state.family);
   const [security, setSecurity] = useState(props.location.state.security);
+  const [dataPath, setDataPath] = useState();
   const [path, setPath] = useState();
   const [currentResult, setCurrentResult] = useState({});
 
@@ -27,6 +28,7 @@ export default function Results(props) {
       .then((response) => {
         setCurrentResult(response.data);
         // let currentResult = response.data;
+        setDataPath(response.data.resultPath);
         setPath(`/adventure/${response.data.resultPath}`);
 
         setHealth(props.location.state.health + Number(response.data.health));
@@ -56,10 +58,14 @@ export default function Results(props) {
       if (security >= 100) {
         setPath("/kicked-out");
       }
+      if (dataPath == 20) {
+        setPath("/success");
+      }
     },
     [health],
     [security],
-    [family]
+    [family],
+    [dataPath]
   );
 
   console.log(props.location.state);
